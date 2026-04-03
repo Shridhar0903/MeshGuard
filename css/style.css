@@ -1,0 +1,668 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height:100%
+}
+
+/* ==================Hero Section=============== */
+
+.hero{
+    position:relative;
+    height: 100vh;
+    background: url(/Images/hero_bg.png);
+    display: flex;
+    align-items: center;
+    padding:0 60px;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+     background: linear-gradient(
+        180deg,
+        rgba(0, 18, 26, 0.877) 0%,     /* blue */
+        rgba(181, 245, 253, 0.396) 40%,  /* light white */
+        rgba(255, 255, 255, 0.0) 70%,  /* fade */
+        rgba(255, 255, 255, 0.0) 100%  /* fully transparent */
+    );
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:600px;
+    color:#fff;
+}
+
+.hero-content h1{
+    margin-top: 60px;
+    font-size:75px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-content h1 span{
+    color:#ff7a00;
+}
+.hero-content p{
+    font-size:16px;
+    margin-bottom:30px;
+    color:#ddd;
+}
+/* BUTTONS */
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn-primary{
+    background:#ff7a00;
+    color:#fff;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn-primary:hover{
+    background:#e66900;
+}
+
+.btn-secondary{
+    border:1px solid #fff;
+    color:#fff;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn-secondary:hover{
+    background:#fff;
+    color:#000;
+}
+/* .mouse-mesh{
+    position:absolute;
+    width:250px;
+    height:250px;
+    pointer-events:none;
+    z-index:1;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.15) 0px,
+            rgba(255,255,255,0.15) 1px,
+            transparent 1px,
+            transparent 15px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,255,255,0.15) 0px,
+            rgba(255,255,255,0.15) 1px,
+            transparent 1px,
+            transparent 15px
+        );
+
+    border-radius:50%;
+    transform: translate(-50%, -50%);
+} */
+
+
+
+/* ===== SECTION BASE ===== */
+.about-unique{
+    position:relative;
+    padding:120px 60px;
+    background:#ffffff;
+    overflow:hidden;
+}
+
+/* BACKGROUND TEXT */
+.about-bg-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:140px;
+    color:rgba(0,0,0,0.03); /* light watermark */
+    letter-spacing:10px;
+    pointer-events:none;
+}
+
+/* CONTAINER */
+.about-container{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    position:relative;
+    z-index:2;
+}
+
+/* ===== IMAGE ===== */
+.about-img-box{
+    position:relative;
+    flex:1;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.about-img-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.about-img-box:hover img{
+    transform:scale(1.08);
+}
+
+/* MESH OVERLAY (VERY SUBTLE) */
+.mesh-layer{
+    position:absolute;
+    inset:0;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0,0,0,0.05) 0px,
+            rgba(0,0,0,0.05) 1px,
+            transparent 1px,
+            transparent 14px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(0,0,0,0.05) 0px,
+            rgba(0,0,0,0.05) 1px,
+            transparent 1px,
+            transparent 14px
+        );
+
+    opacity:0.4;
+}
+
+/* ===== GLASS CARD (LIGHT) ===== */
+.about-glass{
+    flex:1;
+    padding:40px;
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(0,0,0,0.08);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* HEADING */
+.about-glass h2{
+    font-size:40px;
+    margin-bottom:10px;
+    color:#111;
+}
+
+.about-glass span{
+    color:#e98d0c;
+}
+
+/* TAGLINE */
+.tagline{
+    color:#666;
+    margin-bottom:20px;
+}
+
+/* TEXT */
+.about-glass p{
+    color:#555;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+    margin-bottom:25px;
+    color:#444;
+}
+
+/* BUTTON */
+.about-btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:linear-gradient(45deg,#e98d0c,#ffb347);
+    color:#fff;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.about-btn:hover{
+    transform:translateY(-3px);
+}
+
+.why-sticky{
+    position:relative;
+    height:180vh; /* EXTRA HEIGHT → allows scrolling effect */
+}
+
+/* ===== STICKY BACKGROUND ===== */
+.why-bg{
+    position:sticky;
+    top:0;
+    height:100vh;
+
+    /* YOUR BACKGROUND IMAGE */
+    background: 
+        linear-gradient(
+            rgba(1,45,65,0.85),  /* dark blue overlay */
+            rgba(1,45,65,0.85)
+        ),
+        url("/Images/why-bg.png"); /* change image */
+
+    background-size:cover;
+    background-position:center;
+
+    z-index:1;
+}
+
+.why-content{
+    position:absolute;
+    top:2px;
+    width:100%;
+    height:100%;
+
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    color:#fff;
+    text-align:center;
+    padding:0 20px;
+}
+.why-content h2{
+    font-size:50px;
+    margin-top: 2px;
+    margin-bottom:10px;
+}
+
+.why-content span{
+    color:#e98d0c;
+}
+
+/* SUBTITLE */
+.subtitle{
+    color:#ccc;
+    margin-bottom:50px;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns: repeat(3,5fr);
+    margin-top: 50px;
+    gap:60px;
+    max-width:1000px;
+
+    row-gap: 100px;   /* 🔥 space between rows */
+    column-gap: 40px;
+}
+.why-box{
+    padding:20px;
+    transition:0.4s;
+}
+.why-box i{
+    font-size:80px;
+    color:#00cfff; /* light blue */
+    margin-bottom:15px;
+
+    border:2px solid #00cfff;
+    border-radius:50%;
+    padding:20px;
+}
+/* TITLE */
+.why-box h3{
+    margin-bottom:30px;
+}
+
+.why-box p{
+    font-size:20px;
+    color:#ddd;
+}
+/* ===== HOVER EFFECT ===== */
+.why-box:hover{
+    transform:translateY(-10px);
+}
+
+.why-box:hover i{
+    background:#e98d0c;
+    border-color:#e98d0c;
+    color:#fff;
+}
+
+
+
+/* ===== SECTION ===== */
+.products{
+    padding:100px 60px;
+    text-align:center;
+    background:#fff;
+}
+
+.products h2{
+    font-size:50px;
+    margin-bottom:50px;
+}
+
+.products span{
+    color:#e98d0c;
+}
+
+/* ===== GRID ===== */
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+/* ===== CARD MAIN ===== */
+.product-card{
+    position:relative;
+    perspective:1000px; 
+    /* 🔥 Gives 3D depth for flip effect */
+}
+/* glowing border */
+
+
+.product-card:hover{
+    transform:translateY(-12px) scale(1.02);
+}
+
+/* ===== INNER (THIS ROTATES) ===== */
+.card-inner{
+    position:relative;
+    width:100%;
+    height:350px;
+
+    transform-style:preserve-3d; 
+    /* 🔥 Allows front/back to exist in 3D */
+
+    transition:transform 0.8s ease;
+}
+
+/* ===== HOVER → ROTATE CARD ===== */
+.product-card:hover .card-inner{
+    transform:rotateY(180deg);
+    /* 🔥 horizontal flip */
+}
+
+/* ===== FRONT + BACK COMMON ===== */
+.card-front,
+.card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    backface-visibility:hidden;
+    /* 🔥 hides backside when flipped */
+
+    border-radius:15px;
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== FRONT DESIGN ===== */
+.card-front{
+   background:rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.card-front img{
+    width:100%;
+    height:75%;
+    object-fit:contain;
+}
+
+.card-front h3{
+    padding:15px;
+    font-size:20px;
+}
+
+/* ===== BACK DESIGN ===== */
+.card-back{
+    background:linear-gradient(135deg,#012d41,#0a5c7a);
+    color:#fff;
+
+    transform:rotateY(180deg);
+    /* 🔥 backside initially rotated */
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.card-back h3{
+    margin-bottom:10px;
+}
+
+.card-back p{
+    font-size:14px;
+    margin-bottom:20px;
+    color:#ddd;
+}
+
+/* BUTTON */
+.card-back a{
+    padding:10px 20px;
+    background:#e98d0c;
+    color:#fff;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.card-back a:hover{
+    background:#cf7a0a;
+}
+
+/* ===== HOVER SHADOW EFFECT ===== */
+.product-card:hover{
+    transform:translateY(-10px);
+    transition:0.3s;
+}
+
+
+
+/* ===== SECTION ===== */
+.process-modern{
+    padding:100px 60px;
+    background:#ffffff;
+    text-align:center;
+}
+
+.process-modern h2{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.process-modern span{
+    color:#e98d0c;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:60px;
+}
+
+/* ===== WRAPPER ===== */
+.process-wrapper{
+    position:relative;
+    max-width:1000px;
+    margin:auto;
+}
+
+/* ===== PROGRESS LINE ===== */
+.progress-line{
+    position:absolute;
+    top:30px;
+    left:0;
+    width:100%;
+    height:4px;
+
+    background:#eee;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+/* ANIMATED LINE */
+.progress-line::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:0%;
+
+    background:linear-gradient(90deg,#0a5c7a,#e98d0c);
+
+    animation:progressMove 6s ease-in-out infinite;
+}
+
+/* ===== STEPS ===== */
+.steps{
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+}
+
+/* ===== STEP ===== */
+.step{
+    width:22%;
+    text-align:center;
+    position:relative;
+}
+
+/* DEFAULT STATE */
+.step .circle{
+    transition:0.4s;
+}
+
+/* STEP 1 */
+.step:nth-child(1) .circle{
+    animation:stepGlow 6s infinite;
+}
+
+/* STEP 2 */
+.step:nth-child(2) .circle{
+    animation:stepGlow 6s infinite;
+    animation-delay:1.5s;
+}
+
+/* STEP 3 */
+.step:nth-child(3) .circle{
+    animation:stepGlow 6s infinite;
+    animation-delay:3s;
+}
+
+/* STEP 4 */
+.step:nth-child(4) .circle{
+    animation:stepGlow 6s infinite;
+    animation-delay:4.5s;
+}
+
+@keyframes stepGlow{
+
+    0%{
+        background:#fff;
+        color:#0a5c7a;
+        transform:scale(1);
+        box-shadow:none;
+    }
+
+    20%{
+        background:#e98d0c;
+        color:#fff;
+        transform:scale(1.2);
+        box-shadow:0 0 20px rgba(233,141,12,0.7);
+    }
+
+    40%{
+        background:#e98d0c;
+        color:#fff;
+        transform:scale(1.1);
+    }
+
+    60%{
+        background:#fff;
+        color:#0a5c7a;
+        transform:scale(1);
+        box-shadow:none;
+    }
+
+    100%{
+        background:#fff;
+        color:#0a5c7a;
+    }
+}
+
+/* ===== CIRCLE ===== */
+.circle{
+    width:60px;
+    height:60px;
+    margin:0 auto 20px;
+
+    border-radius:50%;
+    background:#fff;
+    border:3px solid #0a5c7a;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-weight:bold;
+    color:#0a5c7a;
+
+    transition:0.4s;
+}
+
+/* TEXT */
+.step h3{
+    margin-bottom:10px;
+}
+
+.step p{
+    font-size:14px;
+    color:#555;
+}
+
+/* ===== HOVER EFFECT ===== */
+.step:hover .circle{
+    background:#e98d0c;
+    border-color:#e98d0c;
+    color:#fff;
+    transform:scale(1.1);
+}
+
+/* ===== PROGRESS ANIMATION ===== */
+@keyframes progressMove{
+    0%{ width:0%; }
+    20%{ width:10%; }
+    40%{ width:40%; }
+      60%{ width:60%; }
+      100%{ width:100%; }
+}
