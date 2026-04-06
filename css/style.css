@@ -859,13 +859,13 @@ html,body{
 
 /* BRAND */
 .footer-brand h2{
-    color:#fff;
+    color:#e98d0c;
     font-size:28px;
     margin-bottom:10px;
 }
 
 .footer-brand span{
-    color:#e98d0c;
+    color:#fff;
 }
 
 .footer-brand p{
