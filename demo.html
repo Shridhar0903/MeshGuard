@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .footer-new{
+    background:#05485d;
+    color:#cbd5e1;
+    padding-top:70px;
+}
+
+/* GRID */
+.footer-container-new{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+    gap:40px;
+    padding:0 60px 50px;
+}
+
+/* BRAND */
+.footer-brand h2{
+    color:#fff;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.footer-brand span{
+    color:#e98d0c;
+}
+
+.footer-brand p{
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* LINKS */
+.footer-links h3,
+.footer-contact h3{
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.footer-links ul{
+    list-style:none;
+}
+
+.footer-links ul li{
+    margin-bottom:10px;
+}
+
+.footer-links ul li a{
+    text-decoration:none;
+    color:#cbd5e1;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.footer-links ul li a:hover{
+    color:#e98d0c;
+    padding-left:5px;
+}
+
+/* CONTACT */
+.footer-contact p{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.footer-contact i{
+    color:#e98d0c;
+    margin-right:8px;
+}
+
+/* NEWSLETTER */
+.newsletter{
+    display:flex;
+    margin-top:15px;
+}
+
+.newsletter input{
+    padding:10px;
+    border:none;
+    outline:none;
+    width:100%;
+    border-radius:5px 0 0 5px;
+}
+
+.newsletter button{
+    background:#e98d0c;
+    border:none;
+    padding:10px 15px;
+    color:#fff;
+    border-radius:0 5px 5px 0;
+    cursor:pointer;
+}
+
+/* SOCIAL */
+.footer-social{
+    margin-top:15px;
+}
+
+.footer-social a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    width:35px;
+    height:35px;
+    margin-right:10px;
+
+    background:#0a5c7a;
+    border-radius:50%;
+    color:#fff;
+
+    transition:0.3s;
+}
+
+.footer-social a:hover{
+    background:#e98d0c;
+    transform:translateY(-3px);
+}
+
+/* BOTTOM */
+.footer-bottom-new{
+    text-align:center;
+    padding:15px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    font-size:14px;
+}
+
+.footer-bottom-new a{
+    color:#e98d0c;
+    text-decoration:none;
+}
+    </style>
+
+    <footer class="footer-new">
+    <div class="footer-container-new">
+
+        <!-- LEFT BRAND -->
+        <div class="footer-brand">
+            <h2>BRAND <span>NAME</span></h2>
+            <p>Your trusted partner for advanced coating solutions and industrial excellence.</p>
+
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-links">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+
+        <!-- SUPPORT -->
+        <div class="footer-links">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> support@email.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> India</p>
+
+            <div class="newsletter">
+                <input type="email" placeholder="Your Email">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom-new">
+        <p>© 2026 All Rights Reserved | Designed by <a href="#">YourBrand</a></p>
+    </div>
+</footer>
+    
+</body>
+</html>
