@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeshGuard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,25 +32,60 @@
   </header>
 
   <!-- ===============================heroSection==============================-->
-   <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="mouse-mesh"></div>
+  <section class="hero">
 
-        <div class="hero-content">
-            <h1>Premium Mosquito Nets for <span>Windows & Door</span></h1>   
-            
-            <p>
-             Protect your home with high-quality mesh solutions.
-            Enjoy fresh air without insects.
-            </p>
+    <!-- Slides -->
+    <div class="slides">
 
-            <div class="hero-buttons">
-                <a href="#" class="btn-primary">Get Quote</a>
-                <a href="#" class="btn-secondary">View Products</a>
+        <div class="slide active" style="background-image:url('/Images/hero_bg.png')">
+            <div class="hero-content">
+                <h1>Premium Mosquito Nets for <span>Windows & Door</span></h1>
+                <p>Protect your home with high-quality mesh solutions. Enjoy fresh air without insects.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Get Quote</a>
+                    <a href="#" class="btn-secondary">View Products</a>
+                </div>
             </div>
         </div>
-   </section>
 
+        <div class="slide" style="background-image:url('/Images/sliding-door.webp')">
+            <div class="hero-content">
+                <h1>Strong & Durable <span>Mesh Protection</span></h1>
+                <p>High-quality materials designed for long-lasting protection and comfort.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Get Quote</a>
+                    <a href="#" class="btn-secondary">View Products</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image:url('/Images/hero_bg2.webp')">
+            <div class="hero-content">
+                <h1>Fresh Air Without <span>Insects</span></h1>
+                <p>Enjoy ventilation while keeping mosquitoes and bugs outside.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Get Quote</a>
+                    <a href="#" class="btn-secondary">View Products</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Right Side Dots -->
+    <div class="slider-dots">
+        <div class="dot active" data-index="0">
+            <img src="/Images/hero_bg.png">
+        </div>
+        <div class="dot" data-index="1">
+            <img src="/Images/sliding-door.webp">
+        </div>
+        <div class="dot" data-index="2">
+            <img src="/Images/hero_bg2.webp">
+        </div>
+    </div>
+
+</section>
 
 <!-- ===============================AboutSection==============================-->
  
@@ -170,39 +206,45 @@
 <!--======================================== PROCESS sECTION =======================================-->
 <section class="process-new">
 
-    <h2>Our <span>Process</span></h2>
-    <p class="subtitle">Simple steps to get your perfect mosquito protection</p>
+    <div class="process-header">
+        <h2>Our <span>Process</span></h2>
+    </div>
 
-    <div class="process-container">
+    <div class="process-wrapper">
 
-        <div class="process-card">
-            <img src="https://www.businesslabs.co/wp-content/uploads/2017/05/consulting.jpg" class="card-bg">
-            <div class="icon">01</div>
-            <h3>Consultation</h3>
-            <p>We understand your needs and suggest best solutions</p>
+        <!-- IMAGE PREVIEW -->
+        <div class="process-image">
+            <img id="preview-img" src="https://www.businesslabs.co/wp-content/uploads/2017/05/consulting.jpg">
         </div>
 
-        <div class="process-card">
-            <img src="https://www.eurokidsindia.com/blog/wp-content/uploads/2023/10/what-is-measurement.jpg" class="card-bg">
-            <div class="icon">02</div>
-            <h3>Measurement</h3>
-            <p>Accurate measurements for perfect fitting</p>
-        </div>
+        <!-- CARDS -->
+        <div class="process-container">
 
-        <div class="process-card">
-            <img src="https://mccoymart.com/uploads/category/L1_category/Category_Images/MosquitoNetInstallation.webp" class="card-bg">
-            <div class="icon">03</div>
-            <h3>Installation</h3>
-            <p>Professional and quick installation</p>
-        </div>
+            <div class="process-card " data-img="https://www.businesslabs.co/wp-content/uploads/2017/05/consulting.jpg">
+                <div class="step">01</div>
+                <h3>Consultation</h3>
+                <p>We understand your requirements and suggest the best solution.</p>
+            </div>
 
-        <div class="process-card">
-            <img src="https://static.vecteezy.com/system/resources/previews/024/543/206/non_2x/stack-of-hands-showing-unity-and-teamwork-concept-business-team-standing-hands-together-generative-ai-free-photo.jpg" class="card-bg">
-            <div class="icon">04</div>
-            <h3>Support</h3>
-            <p>After-service support for durability</p>
-        </div>
+            <div class="process-card" data-img="https://www.eurokidsindia.com/blog/wp-content/uploads/2023/10/what-is-measurement.jpg">
+                <div class="step">02</div>
+                <h3>Measurement</h3>
+                <p>Accurate measurements for a perfect fit.</p>
+            </div>
 
+            <div class="process-card" data-img="https://mccoymart.com/uploads/category/L1_category/Category_Images/MosquitoNetInstallation.webp">
+                <div class="step">03</div>
+                <h3>Installation</h3>
+                <p>Quick and professional installation service.</p>
+            </div>
+
+            <div class="process-card" data-img="https://static.vecteezy.com/system/resources/previews/024/543/206/non_2x/stack-of-hands-showing-unity-and-teamwork-concept-business-team-standing-hands-together-generative-ai-free-photo.jpg">
+                <div class="step">04</div>
+                <h3>Support</h3>
+                <p>Reliable after-service support.</p>
+            </div>
+
+        </div>
     </div>
 
 </section>
@@ -324,67 +366,45 @@
     </div>
 
 </section>
+ <footer class="footer-wire">
 
-<footer class="footer-new">
-    <div class="footer-container-new">
-
-        <!-- LEFT BRAND -->
-        <div class="footer-brand">
-            <h2>Mesh <span>Guard</span></h2>
-            <p>Your trusted partner for advanced coating solutions and industrial excellence.</p>
-
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+    <!-- TOP BAR -->
+    <div class="footer-top">
+        <div class="footer-left">
+            <span><i class="fas fa-envelope"></i> info@meshguard.com</span>
+            <span><i class="fas fa-phone"></i> +91 98765 43210</span>
         </div>
 
-        <!-- LINKS -->
-        <div class="footer-links">
-            <h3>About</h3>
-            <ul>
-                  <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Product</a></li>
-              
-    
-            </ul>
+        <div class="footer-logo">
+            <h2>Mesh<span>Guard</span></h2>
         </div>
 
-        <!-- SUPPORT -->
-        <div class="footer-links">
-            <h3>Our Products</h3>
-            <ul>
-                <li><a href="#">Window Mosquito Net</a></li>
-                <li><a href="#">Slidingg Door Mesh</a></li>
-                <li><a href="#">Pleated Mesh</a></li>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAV -->
+    <div class="footer-bottom">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Products</a></li>
             
-            </ul>
-        </div>
-
-        <!-- CONTACT -->
-        <div class="footer-contact">
-            <h3>Contact</h3>
-            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-            <p><i class="fas fa-envelope"></i> support@email.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> India</p>
-
-            <div class="newsletter">
-                <input type="email" placeholder="Your Email">
-                <button><i class="fas fa-paper-plane"></i></button>
-            </div>
-        </div>
-
+        </ul>
     </div>
 
-    <!-- BOTTOM -->
+      <!-- BOTTOM -->
     <div class="footer-bottom-new">
-        <p>© 2026 All Rights Reserved | Designed by <a href="#">YourBrand</a></p>
+        <p>© 2026 All Rights Reserved | Designed by <a href="#">QiroTech Innovation Pvt.Ltd</a></p>
     </div>
+
 </footer>
+
+
 
 
  

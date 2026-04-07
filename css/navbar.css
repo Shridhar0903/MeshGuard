@@ -8,6 +8,13 @@ html,body{
      height: 100%;
 }
 
+
+:root{
+    --font-body: 'Poppins', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+}
+
+
 .navbar{
     position: fixed;
     top: 0px;
@@ -42,7 +49,8 @@ text-decoration:none;
 font-weight:600;
 color:#ffffffe9;
 position:relative;
-font-size:20px;
+font-size:16px;
+font-family: var(--font-body);
 }
 
 .nav-links a::after{
@@ -68,7 +76,15 @@ border-radius:30px;
 background-color: #e98d0c;
 border:1px solid #ddd;
 color:white ;
-font-size: 20px;
+font-size: 16px;
+font-family: var(--font-body);
+transition:0.3s
+
+}
+
+.Contact a:hover{
+    background:#fff;
+    color:#000;
 }
 
 /* SCROLL EFFECT */
