@@ -645,6 +645,7 @@ html,body{
 
     cursor:pointer;
     transition:all 0.4s ease;
+    font-family: var(--font-body);
 }
 
 /* STEP */
@@ -659,6 +660,7 @@ html,body{
 .process-card h3{
     font-size:18px;
     margin-bottom:8px;
+    
 }
 
 .process-card p{
