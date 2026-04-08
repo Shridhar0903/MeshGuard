@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height:100%;
+    background-color: #ffffff;
+}
+
+:root{
+    --font-body: 'Poppins', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+}
+
+.about-hero {
+    position: relative;
+    height: 400px;
+    background: url('/Images/about.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Dark overlay */
+.about-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        #011c29,
+        #024d6b91,
+        #0363801a
+        );
+        
+}
+
+/* Center text */
+.about-hero h1 {
+    position: relative;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+    font-family: var(--font-heading);
+}
+
+
+/* =================About Section====================== */
+/* Section */
+.about-section {
+    position: relative;
+    margin-top: 80px;
+    padding: 60px 5%;
+    text-align: center;
+    background: linear-gradient(180deg, #f8fafc, #eef3f8);
+    z-index: 1;
+}
+
+.about-section::before {
+    content: "ABOUT";
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-size: 120px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.04); /* very light */
+    
+    letter-spacing: 10px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+}
+/* Intro */
+.about-intro {
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+.about-intro p {
+    font-size: 20px;
+    color: #4a5568;
+    line-height: 1.7;
+    font-family: var(--font-body);
+}
+
+/* Highlight text */
+.MV-span {
+    color: #e66900;
+    font-weight: 600;
+}
+
+/* Cards Layout */
+.about-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Card - Premium Glass Style */
+.about-card {
+    width: 45%;
+    min-width: 300px;
+    padding: 35px;
+    border-radius: 24px;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+
+    /* Border glow */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+
+    /* Shadow */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Gradient border accent */
+.about-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 1px;
+    background: linear-gradient(135deg, #e66900, #ff9a3c);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+
+
+/* Hover Effect */
+.about-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+.about-card h3 {
+    color: #1e2a5a;
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-family: var(--font-heading);
+}
+
+/* Text */
+.about-card p {
+    color: #4a5568;
+    font-size: 15.5px;
+    line-height: 1.7;
+    font-family: var(--font-body);
+}
+
+/* Subtle top accent line */
+.about-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #e66900, transparent);
+}
+
+.story-section {
+    width: 100%;
+}
+
+/* Each block */
+.story-block {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 🔥 Fixed Background */
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+/* Your images */
+.bg1 {
+    background-image: linear-gradient(rgba(1, 60, 88, 0.825), rgba(1,45,65,0.6)),
+                      url('/Images/Mosquito-Nets-1-2.jpg');
+}
+
+.bg2 {
+    background-image: linear-gradient(rgba(2, 77, 107, 0.834), rgba(2,77,107,0.6)),
+                      url('/Images/sliding-door.webp');
+}
+
+.bg3 {
+    background-image: linear-gradient(rgba(3, 64, 83, 0.942), rgba(3,98,128,0.6)),
+                      url('/Images/window-mosquito-net.jpg');
+}
+
+/* ✨ Text */
+.story-text {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+/* Story Text Container (adds depth) */
+.story-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+/* 🔥 Heading - Premium Look */
+.story-text h2 {
+    font-size: 64px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+
+    /* Gradient text */
+    background: linear-gradient(90deg, #ffffff, #ecc7aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Subtle glow */
+    text-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ✨ Small accent line under heading */
+.story-text h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 15px auto 0;
+    background: #e66900;
+    border-radius: 2px;
+}
+
+/* 📝 Paragraph - Premium readability */
+.story-text p {
+    font-size: 20px;
+    line-height: 1.9;
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px 30px;
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Soft shadow */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.cta-section{
+    padding:80px 60px;
+    background: linear-gradient(135deg,#ffffff,#ffffff);
+    color:#00060e;
+    margin-top: 20px; 
+}
+
+/* CONTAINER */
+.cta-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+/* TEXT */
+.cta-text h2{
+    font-size:60px;
+    line-height:1.3;
+    margin-bottom:15px;
+      margin-left: 50px;
+      font-family: var(--font-heading);
+
+}
+
+.cta-text p{
+    color:#7f8081;
+    max-width:500px;
+      margin-left: 50px;
+      font-family: var(--font-body);
+  
+}
+
+/* BUTTON */
+.cta-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 28px;
+    font-size:16px;
+    font-weight:600;
+
+    background:linear-gradient(45deg,#e98d0c,#ffb347);
+    color:#fff;
+
+    text-decoration:none;
+    border-radius:8px;
+
+    transition:0.3s;
+      margin-right: 50px;
+      font-family: var(--font-body);
+}
+
+/* HOVER */
+.cta-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 30px rgba(233,141,12,0.4);
+}
+
+.cta-btn i{
+    transition:0.3s;
+}
+
+.cta-btn:hover i{
+    transform:translateX(6px);
+}
+
+.gradient-text{
+    background: linear-gradient(90deg,#e98d0c,#ffb347);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-family: var(--font-heading);
+}

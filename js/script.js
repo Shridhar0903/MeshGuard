@@ -88,3 +88,20 @@ cardsP.forEach((card) => {
     preview.src = card.getAttribute("data-img");
   });
 });
+
+// ====================================================================
+const panels = document.querySelectorAll(".story-panel");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        panels.forEach((p) => p.classList.remove("active"));
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  { threshold: 0.6 },
+);
+
+panels.forEach((panel) => observer.observe(panel));
