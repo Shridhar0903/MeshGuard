@@ -62,8 +62,20 @@ html,body{
     background: linear-gradient(180deg, #f8fafc, #eef3f8);
     z-index: 1;
 }
+.about-section::before{
+    content:"MESHGUARD";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:160px;
+    font-weight:bold;
+    color:rgba(10,92,122,0.05);
+    z-index:0;
+    font-family: 'Times New Roman', Times, serif;
+}
 
-.about-section::before {
+/* .about-section::before {
     content: "ABOUT";
     position: fixed;
     top: 40%;
@@ -72,13 +84,14 @@ html,body{
     
     font-size: 120px;
     font-weight: 800;
-    color: rgba(0, 0, 0, 0.04); /* very light */
+    color: rgba(0, 0, 0, 0.04); /* very light 
     
     letter-spacing: 10px;
     white-space: nowrap;
     pointer-events: none;
     z-index: 0;
-}
+} */
+
 /* Intro */
 .about-intro {
     max-width: 750px;
